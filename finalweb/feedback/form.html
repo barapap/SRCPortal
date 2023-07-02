@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" type="text/css" href="form.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints & Feedback</title>
+    <link rel="stylesheet" type="text/css" href="form.css"/>
+    <style>
+
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+
+.contactform {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+  
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contactform label.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #5e0c0c;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.contactform input.form-input[type="text"],
+.contactform textarea.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.contactform input.form-input[type="text"]:focus,
+.contactform textarea.form-textarea:focus {
+  border-color: #5e0c0c;
+  outline: none;
+}
+
+.contactform input.form-submit[type="submit"] {
+  background-color: #5e0c0c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.contactform input.form-submit[type="submit"]:hover {
+  background-color: #083358;
+}
+
+.contactform input.form-submit[type="submit"]:focus {
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.success {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+    </style>
+</head>
+<header>
+  <nav>
+    <div class="navbar">
+      <i class="fas fa-bars"></i>
+      <div class="logo">
+        <a href="#">
+          <img src="MPP_Logo.png" alt="MPP Logo" />
+        </a>
+      </div>
+      <div class="nav-links">
+        <ul class="menus">
+          <li>
+            <a class="waves" href="http://localhost/finalweb/Home/Home/visitor_homepage.html">
+              <span style="--spell: 1">H</span>
+              <span style="--spell: 2">o</span>
+              <span style="--spell: 3">m</span>
+              <span style="--spell: 4">e</span>
+            </a>
+          </li>
+          <li>
+            <a class="waves" href="http://localhost/finalweb/Exco/all exco/allexco.html" >
+              <span style="--spell: 1; ">E</span>
+              <span style="--spell: 2; ">X</span>
+              <span style="--spell: 3;">C</span>
+              <span style="--spell: 4">O</span>
+            </a>
+          </li>
+          <li>
+            <a class="waves" href="http://localhost/finalweb/news/newsupd.html" >
+              <span style="--spell: 1;">N</span>
+              <span style="--spell: 2; ">e</span>
+              <span style="--spell: 3; ">W</span>
+              <span style="--spell: 4; ">S</span>
+            </a>
+          </li>
+          <li>
+            <a class="waves" href="http://localhost/finalweb/feedback/feedback/form.html" style="background-color: #5e0c0c;">
+              <span style="--spell: 1; color: white;">C</span>
+              <span style="--spell: 2; color: white;">o</span>
+              <span style="--spell: 3; color: white;">M</span>
+              <span style="--spell: 4; color: white;">P</span>
+              <span style="--spell: 5; color: white;">L</span>
+              <span style="--spell: 6; color: white;">A</span>
+              <span style="--spell: 7; color: white;">I</span>
+              <span style="--spell: 8; color: white;">N</span>
+
+            </a>
+          </li>
+          <li>
+            <a class="waves" href="http://localhost/finalweb/src/login.php" >
+              <span style="--spell: 1;">S</span>
+              <span style="--spell: 2;">R</span>
+              <span style="--spell: 3;">C</span>
+              <span style="--spell: 4;">-</span>
+              <span style="--spell: 5;">L</span>
+              <span style="--spell: 6;">O</span>
+              <span style="--spell: 7;">G</span>
+              <span style="--spell: 8;">I</span>
+              <span style="--spell: 9;">N</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+    
+  <div class="contactform">
+  <form method="POST" action="connect.php">
+    <p>
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" name="name" id="name" class="form-input">
+    </p>
+    <p>
+      <label for="matricNum" class="form-label">Matric Number</label>
+      <input type="text" name="matricNum" id="matricNum" class="form-input">
+    </p>
+    <p>
+      <label for="email" class="form-label">Email</label>
+      <input type="text" name="email" id="email" class="form-input">
+    </p>
+    <p>
+      <label for="message" class="form-label">Complaints and Feedback</label>
+      <textarea name="message" id="message" class="form-textarea"></textarea>
+    </p>
+    <p>
+      <input type="submit" name="submit" id="submit" value="Submit" class="form-submit">
+    </p>
+  </form>
+</div>
+
+
+</body>
+<footer class="Hide footer">
+  <div class="link-row">
+    <div class="address-column">
+      <h3>Mpp UTHM</h3>
+    </div>
+    <div class="link-column">
+      <ul>
+        <li><span>Info about us</span></li>
+        <li>
+          <a href="http://localhost/finalweb/Exco/all exco/allexco.html" rel="noopener noreferrer">Our EXCO</a>
+        </li>
+        <li><a href="http://localhost/finalweb/news/newsupd.html" rel="noopener noreferrer">News</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="social-row">
+    <div class="copyright-column">
+      <p>&copy; 2023 mpp All rights reserved.</p>
+    </div>
+    <div class="social-column">
+      <a href="https://www.instagram.com/mpputhm2023/" target="_blank" rel="noopener noreferrer"
+        >Instagram</a
+      >
+      <a href="https://t.me/mpputhm" target="_blank" rel="noopener noreferrer"
+        >Telegram</a
+      >
+      <a
+        href="https://www.facebook.com/majlisperwakilanpelajaruthm"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Facebook</a
+      >
+      <a href="https://www.youtube.com/@mpputhmofficial2023" target="_blank" rel="noopener noreferrer"
+        >YouTube</a
+      >
+    </div>
+  </div>
+</footer>
+
+</html>
